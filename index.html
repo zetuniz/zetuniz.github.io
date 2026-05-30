@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zetu — Premium Digital Agency | Zetu ni Zako</title>
+  <meta name="description" content="Zetu — Frontend Developer, Graphic Designer, AI Automation Builder. Zetu ni Zako. Building premium digital experiences." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- AOS Scroll Animations -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+  <!-- Swiper Slider -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════
+       LOADING SCREEN
+  ═══════════════════════════════════════════════ -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">
+        <span class="loader-t">Z</span><span class="loader-dot">.</span>
+      </div>
+      <div class="loader-bar">
+        <div class="loader-fill"></div>
+      </div>
+      <p class="loader-text">Initializing Experience...</p>
+    </div>
+  </div>
+
+  <!-- CUSTOM CURSOR -->
+  <div id="cursor"></div>
+  <div id="cursor-follower"></div>
+
+  <!-- ═══════════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════════ -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-text">Zetu<span class="logo-dot">.</span></span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+          <i class="fas fa-moon" id="theme-icon"></i>
+        </button>
+        <a href="#contact" class="nav-cta">Hire Me</a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════
+       HERO SECTION
+  ═══════════════════════════════════════════════ -->
+  <section id="home" class="hero">
+    <canvas id="particles-canvas"></canvas>
+    <div class="hero-grid-overlay"></div>
+
+    <div class="hero-container">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Available for freelance work
+      </div>
+
+      <h1 class="hero-title">
+        <span class="hero-greeting">Welcome to</span>
+        <span class="hero-name">Zetu<span class="hero-period">.</span></span>
+      </h1>
+      <p class="hero-slogan gradient-text">Zetu ni Zako</p>
+
+      <div class="hero-roles">
+        <span class="role-prefix">I build</span>
+        <div class="typing-wrapper">
+          <span id="typed-text" class="typed-text"></span>
+          <span class="cursor-blink">|</span>
+        </div>
+      </div>
+
+      <p class="hero-tagline">
+        Crafting <span class="highlight">premium digital experiences</span> through code, design, and intelligence.
+      </p>
+
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">
+          <span>View Projects</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <span>Hire Me</span>
+          <i class="fas fa-bolt"></i>
+        </a>
+      </div>
+
+      <div class="hero-socials">
+        <a href="#" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-link" aria-label="Behance"><i class="fab fa-behance"></i></a>
+        <a href="https://wa.me/255621335993" class="social-link" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll to explore</span>
+    </div>
+
+    <!-- Hero Stats -->
+    <div class="hero-stats">
+      <div class="stat-item">
+        <span class="stat-num" data-target="30">0</span><span class="stat-plus">+</span>
+        <span class="stat-label">Projects</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="20">0</span><span class="stat-plus">+</span>
+        <span class="stat-label">Clients</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="3">0</span><span class="stat-plus">+</span>
+        <span class="stat-label">Years Exp</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="100">0</span><span class="stat-plus">%</span>
+        <span class="stat-label">Satisfaction</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       ABOUT SECTION
+  ═══════════════════════════════════════════════ -->
+  <section id="about" class="about section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">About Me</span>
+        <h2 class="section-title">The Person <span class="gradient-text">Behind the Code</span></h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-visual" data-aos="fade-right">
+          <div class="about-img-wrapper">
+            <div class="about-img-placeholder">
+              <div class="avatar-glow"></div>
+              <div class="avatar-ring ring-1"></div>
+              <div class="avatar-ring ring-2"></div>
+              <div class="avatar-initials">Z.</div>
+            </div>
+            <div class="about-badge-float badge-1">
+              <i class="fas fa-code"></i>
+              <span>Dev</span>
+            </div>
+            <div class="about-badge-float badge-2">
+              <i class="fas fa-robot"></i>
+              <span>AI</span>
+            </div>
+            <div class="about-badge-float badge-3">
+              <i class="fas fa-palette"></i>
+              <span>Design</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content" data-aos="fade-left">
+          <h3 class="about-heading">Young. <span class="gradient-text">Hungry.</span> Building the Future.</h3>
+          <p class="about-text">
+            I'm Thomas — an ICT student and self-driven digital creator from Zimbabwe, building real-world products that make an impact. What started as curiosity about how websites work has grown into a full-stack creative practice spanning web development, graphic design, AI automation, and business systems.
+          </p>
+          <p class="about-text">
+            I don't just write code — I craft <em>experiences</em>. Whether it's a sleek restaurant website, an AI-powered assistant, or a brand identity that stands out, I bring the same obsessive attention to detail to every pixel and every line.
+          </p>
+          <p class="about-text">
+            Currently building <strong>ZetuMarket</strong>, an African marketplace platform, and <strong>Zeno AI</strong>, a smart assistant for small businesses. I'm always open to exciting freelance projects, collabs, and startup opportunities.
+          </p>
+
+          <div class="about-facts">
+            <div class="fact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Based in Zimbabwe</span>
+            </div>
+            <div class="fact-item">
+              <i class="fas fa-graduation-cap"></i>
+              <span>ICT Student</span>
+            </div>
+            <div class="fact-item">
+              <i class="fas fa-globe"></i>
+              <span>Available Worldwide</span>
+            </div>
+            <div class="fact-item">
+              <i class="fas fa-language"></i>
+              <span>English & Shona</span>
+            </div>
+          </div>
+
+          <div class="about-actions">
+            <a href="#contact" class="btn btn-primary">
+              <span>Let's Talk</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="#" class="btn btn-ghost">
+              <i class="fas fa-download"></i>
+              <span>Download CV</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skills progress -->
+      <div class="skills-progress-grid" data-aos="fade-up" data-aos-delay="200">
+        <div class="progress-card glass">
+          <div class="progress-header">
+            <span class="progress-label">Frontend Development</span>
+            <span class="progress-pct">92%</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" data-width="92"></div></div>
+        </div>
+        <div class="progress-card glass">
+          <div class="progress-header">
+            <span class="progress-label">Graphic Design</span>
+            <span class="progress-pct">88%</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" data-width="88"></div></div>
+        </div>
+        <div class="progress-card glass">
+          <div class="progress-header">
+            <span class="progress-label">AI & Automation</span>
+            <span class="progress-pct">80%</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" data-width="80"></div></div>
+        </div>
+        <div class="progress-card glass">
+          <div class="progress-header">
+            <span class="progress-label">UI/UX Design</span>
+            <span class="progress-pct">85%</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" data-width="85"></div></div>
+        </div>
+        <div class="progress-card glass">
+          <div class="progress-header">
+            <span class="progress-label">App Development</span>
+            <span class="progress-pct">75%</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" data-width="75"></div></div>
+        </div>
+        <div class="progress-card glass">
+          <div class="progress-header">
+            <span class="progress-label">Branding Strategy</span>
+            <span class="progress-pct">83%</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" data-width="83"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       SERVICES SECTION
+  ═══════════════════════════════════════════════ -->
+  <section id="services" class="services section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">What I Do</span>
+        <h2 class="section-title">Premium <span class="gradient-text">Services</span></h2>
+        <p class="section-sub">End-to-end digital solutions — from concept to deployment.</p>
+      </div>
+
+      <div class="services-grid">
+
+        <div class="service-card glass" data-aos="fade-up" data-aos-delay="0">
+          <div class="service-icon-wrap">
+            <div class="service-icon">
+              <i class="fas fa-code"></i>
+            </div>
+            <div class="service-icon-glow"></div>
+          </div>
+          <h3 class="service-title">Website Development</h3>
+          <p class="service-desc">Fast, responsive, and pixel-perfect websites built with modern frameworks. From landing pages to full-stack web apps.</p>
+          <ul class="service-tags">
+            <li>React</li><li>Next.js</li><li>Firebase</li><li>TailwindCSS</li>
+          </ul>
+          <div class="service-arrow"><i class="fas fa-arrow-up-right"></i></div>
+        </div>
+
+        <div class="service-card glass" data-aos="fade-up" data-aos-delay="80">
+          <div class="service-icon-wrap">
+            <div class="service-icon">
+              <i class="fas fa-pen-nib"></i>
+            </div>
+            <div class="service-icon-glow"></div>
+          </div>
+          <h3 class="service-title">Graphic Design</h3>
+          <p class="service-desc">Stunning visuals that communicate your brand story. Logos, banners, flyers, social media kits, and more.</p>
+          <ul class="service-tags">
+            <li>Photoshop</li><li>Illustrator</li><li>Canva Pro</li><li>Figma</li>
+          </ul>
+          <div class="service-arrow"><i class="fas fa-arrow-up-right"></i></div>
+        </div>
+
+        <div class="service-card glass featured" data-aos="fade-up" data-aos-delay="160">
+          <div class="service-featured-badge">Most Popular</div>
+          <div class="service-icon-wrap">
+            <div class="service-icon">
+              <i class="fas fa-robot"></i>
+            </div>
+            <div class="service-icon-glow"></div>
+          </div>
+          <h3 class="service-title">AI Automation</h3>
+          <p class="service-desc">Intelligent systems that automate your workflows, answer customers, and make your business run smarter 24/7.</p>
+          <ul class="service-tags">
+            <li>ChatGPT API</li><li>Make.com</li><li>Zapier</li><li>Custom AI</li>
+          </ul>
+          <div class="service-arrow"><i class="fas fa-arrow-up-right"></i></div>
+        </div>
+
+        <div class="service-card glass" data-aos="fade-up" data-aos-delay="240">
+          <div class="service-icon-wrap">
+            <div class="service-icon">
+              <i class="fas fa-layer-group"></i>
+            </div>
+            <div class="service-icon-glow"></div>
+          </div>
+          <h3 class="service-title">Branding</h3>
+          <p class="service-desc">Complete brand identity packages — logo, color palette, typography, brand guidelines, and visual consistency across platforms.</p>
+          <ul class="service-tags">
+            <li>Logo Design</li><li>Brand Kit</li><li>Style Guide</li><li>Mockups</li>
+          </ul>
+          <div class="service-arrow"><i class="fas fa-arrow-up-right"></i></div>
+        </div>
+
+        <div class="service-card glass" data-aos="fade-up" data-aos-delay="320">
+          <div class="service-icon-wrap">
+            <div class="service-icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <div class="service-icon-glow"></div>
+          </div>
+          <h3 class="service-title">Application Development</h3>
+          <p class="service-desc">Cross-platform mobile and desktop applications built with modern technologies, from prototype to production.</p>
+          <ul class="service-tags">
+            <li>React Native</li><li>Flutter</li><li>PWA</li><li>Electron</li>
+          </ul>
+          <div class="service-arrow"><i class="fas fa-arrow-up-right"></i></div>
+        </div>
+
+        <div class="service-card glass" data-aos="fade-up" data-aos-delay="400">
+          <div class="service-icon-wrap">
+            <div class="service-icon">
+              <i class="fas fa-vector-square"></i>
+            </div>
+            <div class="service-icon-glow"></div>
+          </div>
+          <h3 class="service-title">UI/UX Design</h3>
+          <p class="service-desc">User-centered design systems and prototypes. Wireframes to high-fidelity designs that convert visitors into customers.</p>
+          <ul class="service-tags">
+            <li>Figma</li><li>Wireframes</li><li>Prototypes</li><li>Design Systems</li>
+          </ul>
+          <div class="service-arrow"><i class="fas fa-arrow-up-right"></i></div>
+        </div>
+
+        <div class="service-card glass" data-aos="fade-up" data-aos-delay="480">
+          <div class="service-icon-wrap">
+            <div class="service-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="service-icon-glow"></div>
+          </div>
+          <h3 class="service-title">Smart Business Systems</h3>
+          <p class="service-desc">Custom dashboards, inventory systems, CRMs, and business automation tools tailored to your operations.</p>
+          <ul class="service-tags">
+            <li>Dashboards</li><li>CRM</li><li>Inventory</li><li>Analytics</li>
+          </ul>
+          <div class="service-arrow"><i class="fas fa-arrow-up-right"></i></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       PROJECTS SECTION
+  ═══════════════════════════════════════════════ -->
+  <section id="projects" class="projects section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Portfolio</span>
+        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+        <p class="section-sub">A selection of real-world projects that reflect my range and quality of work.</p>
+      </div>
+
+      <div class="projects-filter" data-aos="fade-up" data-aos-delay="100">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="design">Design</button>
+        <button class="filter-btn" data-filter="ai">AI</button>
+        <button class="filter-btn" data-filter="app">App</button>
+      </div>
+
+      <div class="projects-grid" id="projects-grid">
+
+        <div class="project-card glass" data-category="web" data-aos="fade-up" data-aos-delay="0">
+          <div class="project-preview">
+            <div class="project-preview-bg restaurant"></div>
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#" class="project-link-btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                <a href="#" class="project-link-btn outline"><i class="fab fa-github"></i> Source</a>
+              </div>
+            </div>
+            <div class="project-category-badge">Web</div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Restaurant Website</h3>
+            <p class="project-desc">Full-featured restaurant site with online menu, reservations, and ordering system. Custom animations and mobile-first design.</p>
+            <div class="project-stack">
+              <span>React</span><span>TailwindCSS</span><span>Firebase</span><span>Framer Motion</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass" data-category="web" data-aos="fade-up" data-aos-delay="80">
+          <div class="project-preview">
+            <div class="project-preview-bg gym"></div>
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#" class="project-link-btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                <a href="#" class="project-link-btn outline"><i class="fab fa-github"></i> Source</a>
+              </div>
+            </div>
+            <div class="project-category-badge">Web</div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Gym Website</h3>
+            <p class="project-desc">High-energy fitness website with class schedules, trainer profiles, membership plans, and an integrated workout tracker.</p>
+            <div class="project-stack">
+              <span>HTML/CSS</span><span>JavaScript</span><span>GSAP</span><span>Strapi</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass featured-project" data-category="web" data-aos="fade-up" data-aos-delay="160">
+          <div class="project-preview">
+            <div class="project-preview-bg marketplace"></div>
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#" class="project-link-btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                <a href="#" class="project-link-btn outline"><i class="fab fa-github"></i> Source</a>
+              </div>
+            </div>
+            <div class="project-category-badge">Web + App</div>
+            <div class="project-featured-tag">Featured</div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">ZetuMarket Marketplace</h3>
+            <p class="project-desc">African e-commerce marketplace platform connecting local vendors and buyers. Real-time listings, payments, and vendor dashboards.</p>
+            <div class="project-stack">
+              <span>React</span><span>Node.js</span><span>Firebase</span><span>Stripe</span><span>TailwindCSS</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass featured-project" data-category="ai" data-aos="fade-up" data-aos-delay="240">
+          <div class="project-preview">
+            <div class="project-preview-bg ai-assistant"></div>
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#" class="project-link-btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                <a href="#" class="project-link-btn outline"><i class="fab fa-github"></i> Source</a>
+              </div>
+            </div>
+            <div class="project-category-badge">AI</div>
+            <div class="project-featured-tag">Featured</div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Zeno AI Assistant</h3>
+            <p class="project-desc">Intelligent business assistant powered by GPT-4. Handles customer FAQs, appointment booking, product recommendations, and sales follow-up.</p>
+            <div class="project-stack">
+              <span>OpenAI API</span><span>React</span><span>Node.js</span><span>Firebase</span><span>Twilio</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass" data-category="app" data-aos="fade-up" data-aos-delay="320">
+          <div class="project-preview">
+            <div class="project-preview-bg hardware"></div>
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#" class="project-link-btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                <a href="#" class="project-link-btn outline"><i class="fab fa-github"></i> Source</a>
+              </div>
+            </div>
+            <div class="project-category-badge">App</div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Hardware Sales Tracker</h3>
+            <p class="project-desc">Desktop app for hardware stores to track inventory, process sales, generate reports, and manage supplier orders with real-time analytics.</p>
+            <div class="project-stack">
+              <span>Electron</span><span>React</span><span>SQLite</span><span>Chart.js</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass" data-category="design" data-aos="fade-up" data-aos-delay="400">
+          <div class="project-preview">
+            <div class="project-preview-bg branding"></div>
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#" class="project-link-btn"><i class="fas fa-external-link-alt"></i> View Gallery</a>
+                <a href="#" class="project-link-btn outline"><i class="fab fa-behance"></i> Behance</a>
+              </div>
+            </div>
+            <div class="project-category-badge">Design</div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Flyer & Branding Designs</h3>
+            <p class="project-desc">Collection of brand identities, event flyers, social media kits, and print materials for clients across Zimbabwe and beyond.</p>
+            <div class="project-stack">
+              <span>Photoshop</span><span>Illustrator</span><span>Canva Pro</span><span>Figma</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       SKILLS / TECH STACK SECTION
+  ═══════════════════════════════════════════════ -->
+  <section id="skills" class="skills-section section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Tech Stack</span>
+        <h2 class="section-title">Tools of the <span class="gradient-text">Trade</span></h2>
+        <p class="section-sub">The technologies I use to build, design, and automate.</p>
+      </div>
+
+      <div class="skills-orbit-wrapper" data-aos="fade-up" data-aos-delay="100">
+        <div class="skills-cards-grid">
+
+          <div class="skill-card glass" data-aos="zoom-in" data-aos-delay="0">
+            <div class="skill-icon html"><i class="fab fa-html5"></i></div>
+            <span class="skill-name">HTML5</span>
+            <div class="skill-level">
+              <div class="skill-dots">
+                <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span>
+              </div>
+              <span class="skill-level-text">Expert</span>
+            </div>
+          </div>
+
+          <div class="skill-card glass" data-aos="zoom-in" data-aos-delay="50">
+            <div class="skill-icon css"><i class="fab fa-css3-alt"></i></div>
+            <span class="skill-name">CSS3</span>
+            <div class="skill-level">
+              <div class="skill-dots">
+                <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span>
+              </div>
+              <span class="skill-level-text">Expert</span>
+            </div>
+          </div>
+
+          <div class="skill-card glass" data-aos="zoom-in" data-aos-delay="100">
+            <div class="skill-icon js"><i class="fab fa-js"></i></div>
+            <span class="skill-name">JavaScript</span>
+            <div class="skill-level">
+              <div class="skill-dots">
+                <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot half"></span>
+              </div>
+              <span class="skill-level-text">Advanced</span>
+            </div>
+          </div>
+
+          <div class="skill-card glass" data-aos="zoom-in" data-aos-delay="150">
+            <div class="skill-icon react"><i class="fab fa-react"></i></div>
+            <span class="skill-name">React</span>
+            <div class="skill-level">
+              <div class="skill-dots">
+                <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot half"></span>
+              </div>
+              <span class="skill-level-text">Advanced</span>
+            </div>
+          </div>
+
+          <div class="skill-card glass" data-aos="zoom-in" data-aos-delay="200">
+            <div class="skill-icon tailwind"><i class="fas fa-wind"></i></div>
+            <span class="skill-name">TailwindCSS</span>
+            <div class="skill-level">
+              <div class="skill-dots">
+                <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span>
+              </div>
+              <span class="skill-level-text">Expert</span>
+            </div>
+          </div>
+
+          <div class="skill-card glass" data-aos="zoom-in" data-aos-delay="250">
+            <div class="skill-icon ps"><i class="fas fa-paint-brush"></i></div>
+            <span class="skill-name">Photoshop</span>
+            <div class="skill-level">
+              <div class="skill-dots">
+                <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot half"></span>
+              </div>
+              <span class="skill-level-text">Advanced</span>
+            </div>
+          </div>
+
+          <div class="skill-card glass" data-aos="zoom-in" data-aos-delay="300">
+            <div class="skill-icon ai-tools"><i class="fas fa-brain"></i></div>
+            <span class="skill-name">AI Tools</span>
+            <div class="skill-level">
+              <div class="skill-dots">
+                <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span>
+              </div>
+              <span class="skill-level-text">Expert</span>
+            </div>
+          </div>
+
+          <div class="skill-card glass" data-aos="zoom-in" data-aos-delay="350">
+            <div class="skill-icon firebase"><i class="fas fa-fire"></i></div>
+            <span class="skill-name">Firebase</span>
+            <div class="skill-level">
+              <div class="skill-dots">
+                <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot half"></span><span class="dot"></span>
+              </div>
+              <span class="skill-level-text">Proficient</span>
+            </div>
+          </div>
+
+          <div class="skill-card glass" data-aos="zoom-in" data-aos-delay="400">
+            <div class="skill-icon figma"><i class="fab fa-figma"></i></div>
+            <span class="skill-name">Figma</span>
+            <div class="skill-level">
+              <div class="skill-dots">
+                <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot half"></span>
+              </div>
+              <span class="skill-level-text">Advanced</span>
+            </div>
+          </div>
+
+          <div class="skill-card glass" data-aos="zoom-in" data-aos-delay="450">
+            <div class="skill-icon node"><i class="fab fa-node-js"></i></div>
+            <span class="skill-name">Node.js</span>
+            <div class="skill-level">
+              <div class="skill-dots">
+                <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot half"></span><span class="dot"></span>
+              </div>
+              <span class="skill-level-text">Proficient</span>
+            </div>
+          </div>
+
+          <div class="skill-card glass" data-aos="zoom-in" data-aos-delay="500">
+            <div class="skill-icon git"><i class="fab fa-git-alt"></i></div>
+            <span class="skill-name">Git</span>
+            <div class="skill-level">
+              <div class="skill-dots">
+                <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot half"></span>
+              </div>
+              <span class="skill-level-text">Advanced</span>
+            </div>
+          </div>
+
+          <div class="skill-card glass" data-aos="zoom-in" data-aos-delay="550">
+            <div class="skill-icon canva"><i class="fas fa-star"></i></div>
+            <span class="skill-name">Canva Pro</span>
+            <div class="skill-level">
+              <div class="skill-dots">
+                <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span>
+              </div>
+              <span class="skill-level-text">Expert</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       TESTIMONIALS SECTION
+  ═══════════════════════════════════════════════ -->
+  <section id="testimonials" class="testimonials section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Client Reviews</span>
+        <h2 class="section-title">What Clients <span class="gradient-text">Say</span></h2>
+        <p class="section-sub">Real feedback from real clients who trusted me with their digital vision.</p>
+      </div>
+
+      <div class="swiper testimonials-swiper" data-aos="fade-up" data-aos-delay="100">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="testimonial-card glass">
+              <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+              <p class="testimonial-text">Zetu built us a stunning website that doubled our online reservations in the first month. His attention to detail and speed of delivery is unmatched. Highly recommend!</p>
+              <div class="testimonial-author">
+                <div class="author-avatar" style="background: linear-gradient(135deg, #667eea, #764ba2);">CM</div>
+                <div class="author-info">
+                  <strong>Charles Mutendi</strong>
+                  <span>Owner, Savanna Restaurant</span>
+                </div>
+                <div class="testimonial-stars">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-card glass">
+              <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+              <p class="testimonial-text">The AI chatbot Zetu built for our business handles over 200 customer queries daily without us lifting a finger. It's like having a full-time employee at zero cost.</p>
+              <div class="testimonial-author">
+                <div class="author-avatar" style="background: linear-gradient(135deg, #f093fb, #f5576c);">AN</div>
+                <div class="author-info">
+                  <strong>Amara Ndlovhu</strong>
+                  <span>CEO, TechVentures Africa</span>
+                </div>
+                <div class="testimonial-stars">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-card glass">
+              <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+              <p class="testimonial-text">I needed a brand identity from scratch — logo, colors, social media kit, everything. Zetu delivered a complete brand package that made us look like a Fortune 500 company.</p>
+              <div class="testimonial-author">
+                <div class="author-avatar" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">TM</div>
+                <div class="author-info">
+                  <strong>Tendai Moyo</strong>
+                  <span>Founder, Urban Threads Zim</span>
+                </div>
+                <div class="testimonial-stars">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-card glass">
+              <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+              <p class="testimonial-text">Our gym website went from zero to over 500 new member sign-ups in 6 weeks after launch. The design is fire and it works perfectly on mobile. Zetu is legendary.</p>
+              <div class="testimonial-author">
+                <div class="author-avatar" style="background: linear-gradient(135deg, #43e97b, #38f9d7);">RK</div>
+                <div class="author-info">
+                  <strong>Rudo Khumalo</strong>
+                  <span>Manager, IronClad Fitness</span>
+                </div>
+                <div class="testimonial-stars">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-card glass">
+              <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+              <p class="testimonial-text">The sales tracking system Zetu built completely transformed how we manage inventory. Reports that used to take hours now generate in seconds. Worth every penny and more.</p>
+              <div class="testimonial-author">
+                <div class="author-avatar" style="background: linear-gradient(135deg, #fa709a, #fee140);">PM</div>
+                <div class="author-info">
+                  <strong>Peter Mhike</strong>
+                  <span>Director, BuildRight Hardware</span>
+                </div>
+                <div class="testimonial-stars">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       CONTACT SECTION
+  ═══════════════════════════════════════════════ -->
+  <section id="contact" class="contact section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Let's Build Something <span class="gradient-text">Together</span></h2>
+        <p class="section-sub">Have a project in mind? Let's talk. I'm currently available for freelance work.</p>
+      </div>
+
+      <div class="contact-grid">
+
+        <div class="contact-info" data-aos="fade-right">
+          <h3 class="contact-info-title">Contact Information</h3>
+          <p class="contact-info-sub">Fill out the form or reach out directly through any of the channels below.</p>
+
+          <div class="contact-cards">
+            <a href="mailto:zetunizako@gmail.com" class="contact-card glass">
+              <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <strong>Email</strong>
+                <span>zetunizako@gmail.com</span>
+              </div>
+            </a>
+            <a href="https://wa.me/255621335993" class="contact-card glass whatsapp">
+              <div class="contact-card-icon"><i class="fab fa-whatsapp"></i></div>
+              <div>
+                <strong>WhatsApp</strong>
+                <span>+255 621 335 993</span>
+              </div>
+            </a>
+            <div class="contact-card glass">
+              <div class="contact-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <strong>Location</strong>
+                <span>Zimbabwe · Remote Worldwide</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-socials">
+            <span class="contact-socials-label">Follow me:</span>
+            <div class="social-row">
+              <a href="#" class="social-pill"><i class="fab fa-github"></i> GitHub</a>
+              <a href="#" class="social-pill"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+              <a href="#" class="social-pill"><i class="fab fa-twitter"></i> Twitter</a>
+              <a href="#" class="social-pill"><i class="fab fa-behance"></i> Behance</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrapper" data-aos="fade-left">
+          <form class="contact-form glass" id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required />
+                <span class="form-error" id="name-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="john@example.com" required />
+                <span class="form-error" id="email-error"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Project Inquiry / Collaboration" />
+            </div>
+            <div class="form-group">
+              <label for="service">Service Needed</label>
+              <select id="service" name="service">
+                <option value="">Select a service...</option>
+                <option>Website Development</option>
+                <option>Graphic Design</option>
+                <option>AI Automation</option>
+                <option>Branding</option>
+                <option>Application Development</option>
+                <option>UI/UX Design</option>
+                <option>Smart Business Systems</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project, goals, and timeline..." required></textarea>
+              <span class="form-error" id="message-error"></span>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
+              <span id="btn-text">Send Message</span>
+              <i class="fas fa-paper-plane" id="btn-icon"></i>
+            </button>
+            <div class="form-success glass" id="form-success">
+              <i class="fas fa-check-circle"></i>
+              <span>Message sent! I'll get back to you within 24 hours.</span>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-glow"></div>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#home" class="footer-logo">Zetu<span class="logo-dot">.</span></a>
+          <p class="footer-tagline">Building premium digital experiences,<br>one line at a time.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Behance"><i class="fab fa-behance"></i></a>
+            <a href="https://wa.me/255621335993" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-links-group">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-group">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Web Development</a></li>
+            <li><a href="#services">Graphic Design</a></li>
+            <li><a href="#services">AI Automation</a></li>
+            <li><a href="#services">Branding</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-group">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:zetunizako@gmail.com">Email Me</a></li>
+            <li><a href="https://wa.me/255621335993">WhatsApp</a></li>
+            <li><a href="#contact">Hire Me</a></li>
+            <li><a href="#">Download CV</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Zetu. Crafted with <span class="heart">♥</span> — Zetu ni Zako.</p>
+        <p class="footer-status">
+          <span class="status-dot"></span>
+          Available for new projects
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button id="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
