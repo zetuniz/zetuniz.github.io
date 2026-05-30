@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mbeya Eat — Smart Restaurant Experience | Mbeya, Tanzania</title>
+  <meta name="description" content="Experience the taste of Mbeya. Fresh ingredients, authentic flavors, unforgettable moments. Reserve a table, order via WhatsApp, and earn loyalty rewards." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- LOADING SCREEN -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">M<span class="loader-dot">.</span></div>
+      <p class="loader-tagline">Preparing your experience...</p>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/255621335993?text=Hello!%20I'd%20like%20to%20make%20a%20reservation%20at%20Mbeya%20Eat." class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="wa-tooltip">Order via WhatsApp</span>
+  </a>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-name">Mbeya</span><span class="logo-eat">Eat</span><span class="logo-dot">.</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#menu" class="nav-link">Menu</a></li>
+        <li><a href="#chef" class="nav-link">Chef</a></li>
+        <li><a href="#events" class="nav-link">Events</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="#reservation" class="nav-cta">Reserve a Table</a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-container">
+      <div class="hero-badge" data-aos="fade-down">
+        <i class="fas fa-star"></i>&nbsp; Mbeya's Premier Restaurant &nbsp;<i class="fas fa-star"></i>
+      </div>
+      <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
+        Experience the <br><span class="gold-text">Taste of Mbeya</span>
+      </h1>
+      <p class="hero-sub" data-aos="fade-up" data-aos-delay="200">
+        Fresh ingredients, authentic flavors, <em>unforgettable moments.</em>
+      </p>
+      <div class="hero-cta" data-aos="fade-up" data-aos-delay="300">
+        <a href="#menu" class="btn btn-gold"><i class="fas fa-utensils"></i><span>View Menu</span></a>
+        <a href="#reservation" class="btn btn-outline"><i class="fas fa-calendar-alt"></i><span>Reserve a Table</span></a>
+      </div>
+      <div class="hero-info" data-aos="fade-up" data-aos-delay="400">
+        <div class="info-item"><i class="fas fa-clock"></i><span>Open Daily 7AM – 11PM</span></div>
+        <div class="info-divider"></div>
+        <div class="info-item"><i class="fas fa-map-marker-alt"></i><span>Mbeya City Centre</span></div>
+        <div class="info-divider"></div>
+        <div class="info-item"><i class="fas fa-phone"></i><span>+255 621 335 993</span></div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+      <span>Scroll to explore</span>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="stats-container">
+      <div class="stat"><span class="stat-num" data-target="5000">0</span><span>+</span><span class="stat-label">Happy Customers</span></div>
+      <div class="stat-div"></div>
+      <div class="stat"><span class="stat-num" data-target="120">0</span><span>+</span><span class="stat-label">Menu Items</span></div>
+      <div class="stat-div"></div>
+      <div class="stat"><span class="stat-num" data-target="8">0</span><span>+</span><span class="stat-label">Years of Excellence</span></div>
+      <div class="stat-div"></div>
+      <div class="stat"><span class="stat-num" data-target="15">0</span><span>+</span><span class="stat-label">Expert Chefs</span></div>
+    </div>
+  </div>
+
+  <!-- FEATURED DISHES -->
+  <section id="dishes" class="dishes section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Chef's Selection</span>
+        <h2 class="section-title">Our <span class="gold-text">Signature Dishes</span></h2>
+        <p class="section-sub">Handcrafted with love, served with pride</p>
+      </div>
+      <div class="dishes-grid">
+        <div class="dish-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="dish-img grilled-chicken">
+            <div class="dish-badge">Popular</div>
+            <div class="dish-overlay">
+              <button class="quick-order" onclick="openWhatsApp('Grilled Chicken Mbeya')"><i class="fab fa-whatsapp"></i> Quick Order</button>
+            </div>
+          </div>
+          <div class="dish-info">
+            <div class="dish-header"><h3>Grilled Chicken Mbeya</h3><span class="dish-price">TSh 18,000</span></div>
+            <p>Tender grilled chicken marinated in local spices, served with chips and kachumbari</p>
+            <div class="dish-footer">
+              <div class="dish-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span>(124)</span></div>
+              <span class="dish-time"><i class="fas fa-clock"></i> 25 min</span>
+            </div>
+          </div>
+        </div>
+        <div class="dish-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="dish-img beef-stew">
+            <div class="dish-badge chef">Chef's Pick</div>
+            <div class="dish-overlay">
+              <button class="quick-order" onclick="openWhatsApp('Nyama ya Ngombe')"><i class="fab fa-whatsapp"></i> Quick Order</button>
+            </div>
+          </div>
+          <div class="dish-info">
+            <div class="dish-header"><h3>Nyama ya Ng'ombe</h3><span class="dish-price">TSh 22,000</span></div>
+            <p>Slow-cooked beef stew with coconut milk, fresh tomatoes and aromatic spices</p>
+            <div class="dish-footer">
+              <div class="dish-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><span>(98)</span></div>
+              <span class="dish-time"><i class="fas fa-clock"></i> 35 min</span>
+            </div>
+          </div>
+        </div>
+        <div class="dish-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="dish-img fish-dish">
+            <div class="dish-overlay">
+              <button class="quick-order" onclick="openWhatsApp('Samaki wa Kupaka')"><i class="fab fa-whatsapp"></i> Quick Order</button>
+            </div>
+          </div>
+          <div class="dish-info">
+            <div class="dish-header"><h3>Samaki wa Kupaka</h3><span class="dish-price">TSh 20,000</span></div>
+            <p>Fresh tilapia in rich coconut and tamarind sauce, served with rice or ugali</p>
+            <div class="dish-footer">
+              <div class="dish-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span>(87)</span></div>
+              <span class="dish-time"><i class="fas fa-clock"></i> 30 min</span>
+            </div>
+          </div>
+        </div>
+        <div class="dish-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="dish-img pilau">
+            <div class="dish-badge new">New</div>
+            <div class="dish-overlay">
+              <button class="quick-order" onclick="openWhatsApp('Special Pilau')"><i class="fab fa-whatsapp"></i> Quick Order</button>
+            </div>
+          </div>
+          <div class="dish-info">
+            <div class="dish-header"><h3>Special Pilau</h3><span class="dish-price">TSh 12,000</span></div>
+            <p>Fragrant spiced rice with tender meat, served with kachumbari and chilled juice</p>
+            <div class="dish-footer">
+              <div class="dish-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><span>(203)</span></div>
+              <span class="dish-time"><i class="fas fa-clock"></i> 20 min</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-cta" data-aos="fade-up">
+        <a href="#menu" class="btn btn-gold-outline">See Full Menu <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="why section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Why Mbeya Eat?</span>
+        <h2 class="section-title">More Than Just a <span class="gold-text">Restaurant</span></h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card" data-aos="fade-up" data-aos-delay="0"><div class="why-icon"><i class="fas fa-leaf"></i></div><h3>Farm Fresh Ingredients</h3><p>We source directly from local Mbeya farms every morning. No frozen food, no compromises.</p></div>
+        <div class="why-card" data-aos="fade-up" data-aos-delay="100"><div class="why-icon"><i class="fas fa-hat-chef"></i></div><h3>Master Chefs</h3><p>Our team of 15 experienced chefs blend traditional Tanzanian recipes with modern culinary techniques.</p></div>
+        <div class="why-card" data-aos="fade-up" data-aos-delay="200"><div class="why-icon"><i class="fas fa-bolt"></i></div><h3>Fast Service</h3><p>We respect your time. Every order is prepared and served within 30 minutes, guaranteed.</p></div>
+        <div class="why-card" data-aos="fade-up" data-aos-delay="300"><div class="why-icon"><i class="fas fa-wifi"></i></div><h3>Smart Experience</h3><p>Free WiFi, QR menus, WhatsApp ordering, and digital loyalty rewards — dining in the future.</p></div>
+        <div class="why-card" data-aos="fade-up" data-aos-delay="400"><div class="why-icon"><i class="fas fa-heart"></i></div><h3>Family Atmosphere</h3><p>A warm, welcoming space designed for families, couples, groups, and solo diners alike.</p></div>
+        <div class="why-card" data-aos="fade-up" data-aos-delay="500"><div class="why-icon"><i class="fas fa-motorcycle"></i></div><h3>Fast Delivery</h3><p>Order via WhatsApp and track your delivery in real-time. Hot food at your doorstep.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR STORY -->
+  <section class="story section">
+    <div class="container">
+      <div class="story-grid">
+        <div class="story-visual" data-aos="fade-right">
+          <div class="story-img-main"></div>
+          <div class="story-img-accent"></div>
+          <div class="story-since-badge">
+            <span class="since-year">2016</span>
+            <span class="since-label">Est. in Mbeya</span>
+          </div>
+        </div>
+        <div class="story-content" data-aos="fade-left">
+          <span class="section-tag">Our Story</span>
+          <h2 class="section-title">Born from the <span class="gold-text">Heart of Mbeya</span></h2>
+          <p class="story-text">Mbeya Eat was born in 2016 from a simple dream: to create a place where the rich flavors of Tanzania meet modern dining excellence. What started as a small family kitchen has grown into Mbeya's most beloved restaurant destination.</p>
+          <p class="story-text">Our founder, Mama Amara, believed that food is more than nourishment — it is culture, memory, and connection. Every dish we serve carries her philosophy: <em>"Cook with love, serve with pride."</em></p>
+          <div class="story-values">
+            <div class="value-item"><i class="fas fa-check-circle"></i><span>100% Halal Certified</span></div>
+            <div class="value-item"><i class="fas fa-check-circle"></i><span>Locally Sourced Produce</span></div>
+            <div class="value-item"><i class="fas fa-check-circle"></i><span>Authentic Tanzanian Recipes</span></div>
+            <div class="value-item"><i class="fas fa-check-circle"></i><span>Award-Winning Hospitality</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHEF SECTION -->
+  <section id="chef" class="chef section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Meet the Maestro</span>
+        <h2 class="section-title">The Chef Behind the <span class="gold-text">Magic</span></h2>
+      </div>
+      <div class="chef-grid">
+        <div class="chef-visual" data-aos="fade-right">
+          <div class="chef-img-wrapper">
+            <div class="chef-img"></div>
+            <div class="chef-badge-float"><i class="fas fa-award"></i><span>Best Chef 2023</span></div>
+          </div>
+        </div>
+        <div class="chef-content" data-aos="fade-left">
+          <h3 class="chef-name">Chef Amara Mwangi</h3>
+          <p class="chef-title">Executive Head Chef & Co-Founder</p>
+          <p class="chef-bio">With over 20 years of culinary experience across Tanzania, Kenya, and France, Chef Amara brings an extraordinary blend of East African tradition and international technique to every dish. Trained at Le Cordon Bleu Paris, she returned to her hometown of Mbeya to create something truly special.</p>
+          <div class="chef-stats">
+            <div class="chef-stat"><span class="cs-num">20+</span><span class="cs-label">Years Experience</span></div>
+            <div class="chef-stat"><span class="cs-num">5</span><span class="cs-label">Culinary Awards</span></div>
+            <div class="chef-stat"><span class="cs-num">200+</span><span class="cs-label">Recipes Created</span></div>
+          </div>
+          <blockquote class="chef-quote">"Every meal I cook is a love letter to Mbeya and to Tanzania. Food is how we say, <em>karibu sana</em>."</blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SMART MENU -->
+  <section id="menu" class="menu-section section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Explore the Menu</span>
+        <h2 class="section-title">Something for <span class="gold-text">Everyone</span></h2>
+      </div>
+      <div class="qr-banner" data-aos="fade-up">
+        <div class="qr-content">
+          <div class="qr-icon"><i class="fas fa-qrcode"></i></div>
+          <div class="qr-text">
+            <h4>Scan QR for Digital Menu</h4>
+            <p>No paper, no wait — see the full interactive menu on your phone instantly</p>
+          </div>
+        </div>
+        <div class="qr-code"><div class="qr-placeholder"><i class="fas fa-qrcode"></i></div></div>
+      </div>
+      <div class="menu-tabs" data-aos="fade-up">
+        <button class="tab-btn active" data-tab="breakfast"><i class="fas fa-sun"></i> Breakfast</button>
+        <button class="tab-btn" data-tab="lunch"><i class="fas fa-cloud-sun"></i> Lunch</button>
+        <button class="tab-btn" data-tab="dinner"><i class="fas fa-moon"></i> Dinner</button>
+        <button class="tab-btn" data-tab="drinks"><i class="fas fa-glass-water"></i> Drinks</button>
+        <button class="tab-btn" data-tab="desserts"><i class="fas fa-cake-candles"></i> Desserts</button>
+      </div>
+      <div class="menu-content">
+        <div class="tab-panel active" id="breakfast">
+          <div class="menu-grid">
+            <div class="menu-item"><div class="mi-info"><h4>Mandazi & Chai</h4><p>Freshly fried mandazi with spiced Tanzanian tea</p></div><div class="mi-right"><span class="mi-price">TSh 2,500</span><button class="mi-order" onclick="openWhatsApp('Mandazi & Chai')"><i class="fab fa-whatsapp"></i></button></div></div>
+            <div class="menu-item"><div class="mi-info"><h4>Chapati & Beans</h4><p>Soft chapati with slow-cooked kidney beans and coconut</p></div><div class="mi-right"><span class="mi-price">TSh 3,500</span><button class="mi-order" onclick="openWhatsApp('Chapati & Beans')"><i class="fab fa-whatsapp"></i></button></div></div>
+            <div class="menu-item popular"><div class="mi-info"><h4>Full Mbeya Breakfast <span class="popular-tag">Popular</span></h4><p>Eggs, sausage, toast, fresh juice, fruits, and tea or coffee</p></div><div class="mi-right"><span class="mi-price">TSh 9,500</span><button class="mi-order" onclick="openWhatsApp('Full Mbeya Breakfast')"><i class="fab fa-whatsapp"></i></button></div></div>
+            <div class="menu-item"><div class="mi-info"><h4>Avocado Toast</h4><p>Smashed avo on sourdough with poached egg and chili flakes</p></div><div class="mi-right"><span class="mi-price">TSh 7,000</span><button class="mi-order" onclick="openWhatsApp('Avocado Toast')"><i class="fab fa-whatsapp"></i></button></div></div>
+            <div class="menu-item"><div class="mi-info"><h4>Uji wa Mtama</h4><p>Traditional sorghum porridge, sweet and nourishing</p></div><div class="mi-right"><span class="mi-price">TSh 2,000</span><button class="mi-order" onclick="openWhatsApp('Uji wa Mtama')"><i class="fab fa-whatsapp"></i></button></div></div>
+            <div class="menu-item"><div class="mi-info"><h4>Pancakes & Honey</h4><p>Fluffy pancakes drizzled with local honey and fresh fruit</p></div><div class="mi-right"><span class="mi-price">TSh 6,000</span><button class="mi-order" onclick="openWhatsApp('Pancakes & Honey')"><i class="fab fa-whatsapp"></i></button></div></div>
+          </div>
+        </div>
+        <div class="tab-panel" id="lunch">
+          <div class="menu-grid">
+            <div class="menu-item popular"><div class="mi-info"><h4>Ugali & Mchuzi wa Nyama <span class="popular-tag">Popular</span></h4><p>Classic Tanzanian ugali with rich beef or chicken stew</p></div><div class="mi-right"><span class="mi-price">TSh 8,000</span><button class="mi-order" onclick="openWhatsApp('Ugali & Mchuzi')"><i class="fab fa-whatsapp"></i></button></div></div>
+            <div class="menu-item"><div class="mi-info"><h4>Biryani ya Kuku</h4><p>Fragrant chicken biryani with fried onions and raita</p></div><div class="mi-right"><span class="mi-price">TSh 13,000</span><button class="mi-order" onclick="openWhatsApp('Biryani ya Kuku')"><i class="fab fa-whatsapp"></i></button></div></div>
+            <div class="menu-item"><div class="mi-info"><h4>Pilau & Kachumbari</h4><p>Aromatic spiced rice with fresh tomato-onion salad</p></div><div class="mi-right"><span class="mi-price">TSh 10,000</span><button class="mi-order" onclick="openWhatsApp('Pilau & Kachumbari')"><i class="fab fa-whatsapp"></i></button></div></div>
+            <div class="menu-item"><div class="mi-info"><h4>Wali wa Nazi & Samaki</h4><p>Coconut rice with grilled or fried fish fillet</p></div><div class="mi-right"><span class="mi-price">TSh 14,000</span><button class="mi-order" onclick="openWhatsApp('Wali wa Nazi & Samaki')"><i class="fab fa-whatsapp"></i></button></div></div>
+            <div class="menu-item"><div class="mi-info"><h4>Vegetable Stir Fry</h4><p>Seasonal local vegetables with garlic, ginger and soy sauce</p></div><div class="mi-right"><span class="mi-price">TSh 7,500</span><button class="mi-order" onclick="openWhatsApp('Vegetable Stir Fry')"><i class="fab fa-whatsapp"></i></button></div></div>
+            <div class="menu-item"><div class="mi-info"><h4>Mishkaki Plate</h4><p>Grilled beef skewers with chips, sauce and salad</p></div><div class="mi-right"><span class="mi-price">TSh 11,000</span><button class="mi-order" onclick="openWhatsApp('Mishkaki Plate')"><i class="fab fa-whatsapp"></i></button></div></div>
+          </div>
+        </div>
+        <div class="tab-panel" id="dinner">
+          <div class="menu-grid">
+            <div class="menu-item"><div class="mi-info"><h4>Grilled Tilapia</h4><p>Whole grilled tilapia with herb butter, fries and garden salad</p></div><div class="mi-right"><span class="mi-price">TSh 20,000</span><button class="mi-order" onclick="openWhatsApp('Grilled Tilapia')"><i class="fab fa-whatsapp"></i></button></div></div>
+            <div class="menu-item popular"><div class="mi-info"><h4>T-Bone Steak <span class="popular-tag">Premium</span></h4><p>350g T-bone with roasted vegetables, mushroom sauce and garlic bread</p></div><div class="mi-right"><span class="mi-price">TSh 35,000</span><button class="mi-order" onclick="openWhatsApp('T-Bone Steak')"><i class="fab fa-whatsapp"></i></button></div></div>
+            <div class="menu-item"><div class="mi-info"><h4>Lamb Chops</h4><p>Slow-roasted lamb chops with mint jelly and seasonal vegetables</p></div><div class="mi-right"><span class="mi-price">TSh 30,000</span><button class="mi-order" onclick="openWhatsApp('Lamb Chops')"><i class="fab fa-whatsapp"></i></button></div></div>
+            <div class="menu-item"><div class="mi-info"><h4>Butter Chicken</h4><p>Creamy tomato-based chicken curry with naan or rice</p></div><div class="mi-right"><span class="mi-price">TSh 22,000</span><button class="mi-order" onclick="openWhatsApp('Butter Chicken')"><i class="fab fa-whatsapp"></i></button></div></div>
+            <div class="menu-item"><div class="mi-info"><h4>Chef's Table Special</h4><p>Surprise 4-course tasting menu — changes weekly with seasonal ingredients</p></div><div class="mi-right"><span class="mi-price">TSh 55,000</span><button class="mi-order" onclick="openWhatsApp('Chefs Table Special')"><i class="fab fa-whatsapp"></i></button></div></div>
+            <div class="menu-item"><div class="mi-info"><h4>Prawn Coconut Curry</h4><p>Fresh prawns in rich coconut curry with steamed rice</p></div><div class="mi-right"><span class="mi-price">TSh 28,000</span><button class="mi-order" onclick="openWhatsApp('Prawn Coconut Curry')"><i class="fab fa-whatsapp"></i></button></div></div>
+          </div>
+        </div>
+        <div class="tab-panel" id="drinks">
+          <div class="menu-grid">
+            <div class="menu-item"><div class="mi-info"><h4>Fresh Mango Juice</h4><p>100% fresh-squeezed Mbeya mangoes, no sugar added</p></div><div class="mi-right"><span class="mi-price">TSh 4,500</span><button class="mi-order" onclick="openWhatsApp('Fresh Mango Juice')"><i class="fab fa-whatsapp"></i></button></div></div>
+            <div class="menu-item popular"><div class="mi-info"><h4>Avocado Smoothie <span class="popular-tag">Popular</span></h4><p>Creamy avocado, milk and honey blend</p></div><div class="mi-right"><span class="mi-price">TSh 6,000</span><button class="mi-order" onclick="openWhatsApp('Avocado Smoothie')"><i class="fab fa-whatsapp"></i></button></div></div>
+            <div class="menu-item"><div class="mi-info"><h4>Kilimanjaro Beer</h4><p>Tanzania's finest cold lager</p></div><div class="mi-right"><span class="mi-price">TSh 5,000</span><button class="mi-order" onclick="openWhatsApp('Kilimanjaro Beer')"><i class="fab fa-whatsapp"></i></button></div></div>
+            <div class="menu-item"><div class="mi-info"><h4>Masala Chai</h4><p>Spiced tea with ginger, cardamom and cinnamon</p></div><div class="mi-right"><span class="mi-price">TSh 2,500</span><button class="mi-order" onclick="openWhatsApp('Masala Chai')"><i class="fab fa-whatsapp"></i></button></div></div>
+            <div class="menu-item"><div class="mi-info"><h4>Tropical Mocktail</h4><p>Pineapple, passion fruit, mint and sparkling water</p></div><div class="mi-right"><span class="mi-price">TSh 7,000</span><button class="mi-order" onclick="openWhatsApp('Tropical Mocktail')"><i class="fab fa-whatsapp"></i></button></div></div>
+            <div class="menu-item"><div class="mi-info"><h4>Ethiopian Coffee</h4><p>Single-origin Ethiopian coffee, espresso or filter</p></div><div class="mi-right"><span class="mi-price">TSh 4,000</span><button class="mi-order" onclick="openWhatsApp('Ethiopian Coffee')"><i class="fab fa-whatsapp"></i></button></div></div>
+          </div>
+        </div>
+        <div class="tab-panel" id="desserts">
+          <div class="menu-grid">
+            <div class="menu-item popular"><div class="mi-info"><h4>Chocolate Lava Cake <span class="popular-tag">Must Try</span></h4><p>Warm chocolate cake with molten centre, served with vanilla ice cream</p></div><div class="mi-right"><span class="mi-price">TSh 9,000</span><button class="mi-order" onclick="openWhatsApp('Chocolate Lava Cake')"><i class="fab fa-whatsapp"></i></button></div></div>
+            <div class="menu-item"><div class="mi-info"><h4>Ice Cream Trio</h4><p>3 scoops of seasonal flavours — mango, coconut and chocolate</p></div><div class="mi-right"><span class="mi-price">TSh 6,500</span><button class="mi-order" onclick="openWhatsApp('Ice Cream Trio')"><i class="fab fa-whatsapp"></i></button></div></div>
+            <div class="menu-item"><div class="mi-info"><h4>Tropical Fruit Salad</h4><p>Fresh seasonal fruits with passion fruit dressing and mint</p></div><div class="mi-right"><span class="mi-price">TSh 5,000</span><button class="mi-order" onclick="openWhatsApp('Tropical Fruit Salad')"><i class="fab fa-whatsapp"></i></button></div></div>
+            <div class="menu-item"><div class="mi-info"><h4>Tiramisu</h4><p>Classic Italian dessert with a Tanzanian coffee twist</p></div><div class="mi-right"><span class="mi-price">TSh 10,000</span><button class="mi-order" onclick="openWhatsApp('Tiramisu')"><i class="fab fa-whatsapp"></i></button></div></div>
+            <div class="menu-item"><div class="mi-info"><h4>Cheesecake</h4><p>New York-style cheesecake with fresh mango coulis</p></div><div class="mi-right"><span class="mi-price">TSh 11,000</span><button class="mi-order" onclick="openWhatsApp('Cheesecake')"><i class="fab fa-whatsapp"></i></button></div></div>
+            <div class="menu-item"><div class="mi-info"><h4>Halwa ya Tende</h4><p>Traditional Tanzanian date halwa with cardamom and nuts</p></div><div class="mi-right"><span class="mi-price">TSh 5,500</span><button class="mi-order" onclick="openWhatsApp('Halwa ya Tende')"><i class="fab fa-whatsapp"></i></button></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTS -->
+  <section id="events" class="events section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">What's On</span>
+        <h2 class="section-title">Events & <span class="gold-text">Live Experiences</span></h2>
+        <p class="section-sub">More than a meal — a complete experience</p>
+      </div>
+      <div class="events-grid">
+        <div class="event-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="event-img jazz-night"></div>
+          <div class="event-content">
+            <div class="event-tag">Every Friday</div>
+            <h3>Friday Jazz Night</h3>
+            <p>Live jazz music, candlelit tables, and our special cocktail menu. Dress code: Smart casual.</p>
+            <div class="event-details">
+              <span><i class="fas fa-clock"></i> 7:00 PM – 11:00 PM</span>
+              <span><i class="fas fa-ticket-alt"></i> Free Entry</span>
+            </div>
+            <a href="#reservation" class="btn-event">Reserve Your Spot</a>
+          </div>
+        </div>
+        <div class="event-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="event-img sunday-brunch"></div>
+          <div class="event-content">
+            <div class="event-tag">Every Sunday</div>
+            <h3>Family Brunch Sunday</h3>
+            <p>An all-you-can-eat brunch experience for the whole family. Kids under 5 eat free!</p>
+            <div class="event-details">
+              <span><i class="fas fa-clock"></i> 9:00 AM – 2:00 PM</span>
+              <span><i class="fas fa-ticket-alt"></i> TSh 25,000/person</span>
+            </div>
+            <a href="#reservation" class="btn-event">Reserve Your Spot</a>
+          </div>
+        </div>
+        <div class="event-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="event-img chefs-table"></div>
+          <div class="event-content">
+            <div class="event-tag">Monthly Special</div>
+            <h3>Chef's Table Experience</h3>
+            <p>Exclusive 8-seat dinner with Chef Amara. 7-course tasting menu, an experience of a lifetime.</p>
+            <div class="event-details">
+              <span><i class="fas fa-clock"></i> 7:00 PM (3 hrs)</span>
+              <span><i class="fas fa-ticket-alt"></i> TSh 120,000/person</span>
+            </div>
+            <a href="#reservation" class="btn-event">Book Now — Limited!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">What They Say</span>
+        <h2 class="section-title">Our Guests <span class="gold-text">Love Us</span></h2>
+      </div>
+      <div class="swiper testimonials-swiper" data-aos="fade-up">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><div class="testi-card"><div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>"The grilled chicken at Mbeya Eat is absolutely divine. I've eaten at restaurants in Dar es Salaam and Nairobi, but nothing beats the authenticity here. My family comes every Sunday now!"</p><div class="testi-author"><div class="author-avatar av1">SM</div><div><strong>Sarah Mwamba</strong><span>Local Family</span></div></div></div></div>
+          <div class="swiper-slide"><div class="testi-card"><div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>"As a tourist visiting Mbeya for the first time, Mbeya Eat was the highlight of my trip. The pilau is unforgettable. I've already recommended it to everyone back home in Germany!"</p><div class="testi-author"><div class="author-avatar av2">HK</div><div><strong>Hans Krause</strong><span>Tourist, Germany</span></div></div></div></div>
+          <div class="swiper-slide"><div class="testi-card"><div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div><p>"We held our company dinner here last quarter. Chef Amara personally came to our table and the experience was world-class. The Chef's Table package is worth every shilling!"</p><div class="testi-author"><div class="author-avatar av3">JM</div><div><strong>James Mkandawire</strong><span>Business Executive</span></div></div></div></div>
+          <div class="swiper-slide"><div class="testi-card"><div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>"The Friday Jazz Night is our go-to date night! The atmosphere is magical, the food is incredible, and the staff are so warm and welcoming. We've been coming for 2 years and it never disappoints."</p><div class="testi-author"><div class="author-avatar av4">AN</div><div><strong>Amina & Nasser</strong><span>Regular Couple</span></div></div></div></div>
+          <div class="swiper-slide"><div class="testi-card"><div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>"Ordered via WhatsApp and the food arrived in 28 minutes — still hot! The delivery tracking was spot on. The samaki wa kupaka was absolutely fresh and delicious. Will order again tonight!"</p><div class="testi-author"><div class="author-avatar av5">PK</div><div><strong>Peter Kamwemba</strong><span>Regular Delivery Customer</span></div></div></div></div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="gallery section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Visual Stories</span>
+        <h2 class="section-title">A Feast for <span class="gold-text">Your Eyes</span></h2>
+      </div>
+      <div class="gallery-grid" data-aos="fade-up">
+        <div class="gallery-item gi-tall food-1"><div class="gi-overlay"><span>Signature Dishes</span></div></div>
+        <div class="gallery-item food-2"><div class="gi-overlay"><span>Chef's Kitchen</span></div></div>
+        <div class="gallery-item interior-1"><div class="gi-overlay"><span>Dining Area</span></div></div>
+        <div class="gallery-item food-3"><div class="gi-overlay"><span>Fresh Ingredients</span></div></div>
+        <div class="gallery-item gi-wide interior-2"><div class="gi-overlay"><span>Ambiance & Events</span></div></div>
+        <div class="gallery-item food-4"><div class="gi-overlay"><span>Dessert Selection</span></div></div>
+        <div class="gallery-item interior-3"><div class="gi-overlay"><span>Private Dining</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESERVATION -->
+  <section id="reservation" class="reservation section">
+    <div class="container">
+      <div class="reservation-grid">
+        <div class="res-left" data-aos="fade-right">
+          <span class="section-tag">Book a Table</span>
+          <h2 class="section-title">Reserve Your <span class="gold-text">Experience</span></h2>
+          <p>Secure your table in seconds. We'll confirm your reservation via WhatsApp within 15 minutes.</p>
+          <div class="res-info">
+            <div class="ri-item"><i class="fas fa-clock"></i><div><strong>Opening Hours</strong><span>Mon–Sun: 7:00 AM – 11:00 PM</span></div></div>
+            <div class="ri-item"><i class="fas fa-users"></i><div><strong>Group Bookings</strong><span>For 10+ guests, call us directly</span></div></div>
+            <div class="ri-item"><i class="fas fa-phone"></i><div><strong>Phone Reservation</strong><span>+255 621 335 993</span></div></div>
+          </div>
+        </div>
+        <div class="res-right" data-aos="fade-left">
+          <form class="reservation-form" id="res-form">
+            <div class="form-row">
+              <div class="form-group"><label>Full Name</label><input type="text" placeholder="Your full name" required /></div>
+              <div class="form-group"><label>Phone / WhatsApp</label><input type="tel" placeholder="+255 XXX XXX XXX" required /></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label>Date</label><input type="date" required /></div>
+              <div class="form-group"><label>Time</label>
+                <select required>
+                  <option value="">Select time</option>
+                  <option>7:00 AM</option><option>8:00 AM</option><option>9:00 AM</option><option>10:00 AM</option><option>11:00 AM</option><option>12:00 PM</option><option>1:00 PM</option><option>2:00 PM</option><option>3:00 PM</option><option>4:00 PM</option><option>5:00 PM</option><option>6:00 PM</option><option>7:00 PM</option><option>8:00 PM</option><option>9:00 PM</option><option>10:00 PM</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label>Guests</label>
+                <select required>
+                  <option value="">How many?</option>
+                  <option>1 Guest</option><option>2 Guests</option><option>3 Guests</option><option>4 Guests</option><option>5 Guests</option><option>6 Guests</option><option>7 Guests</option><option>8+ Guests (Group)</option>
+                </select>
+              </div>
+              <div class="form-group"><label>Occasion (Optional)</label>
+                <select>
+                  <option value="">Select occasion</option>
+                  <option>Birthday</option><option>Anniversary</option><option>Business Dinner</option><option>Family Gathering</option><option>Date Night</option><option>Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group"><label>Special Requests</label><textarea placeholder="Dietary requirements, special arrangements..." rows="3"></textarea></div>
+            <button type="submit" class="btn btn-gold btn-full" id="res-btn">
+              <i class="fas fa-calendar-check"></i><span>Confirm Reservation</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOYALTY PROGRAM -->
+  <section class="loyalty section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Rewards Program</span>
+        <h2 class="section-title">Eat More, <span class="gold-text">Earn More</span></h2>
+        <p class="section-sub">Every meal earns you points. Redeem for free food, discounts, and exclusive experiences.</p>
+      </div>
+      <div class="loyalty-tiers" data-aos="fade-up">
+        <div class="tier-card bronze">
+          <div class="tier-icon"><i class="fas fa-circle"></i></div>
+          <h3>Bronze</h3><span class="tier-points">0 – 500 pts</span>
+          <ul><li><i class="fas fa-check"></i> 5% off every meal</li><li><i class="fas fa-check"></i> Birthday free dessert</li><li><i class="fas fa-check"></i> Priority WhatsApp ordering</li></ul>
+        </div>
+        <div class="tier-card silver">
+          <div class="tier-icon"><i class="fas fa-circle"></i></div>
+          <h3>Silver</h3><span class="tier-points">501 – 1,500 pts</span>
+          <ul><li><i class="fas fa-check"></i> 10% off every meal</li><li><i class="fas fa-check"></i> Free starter monthly</li><li><i class="fas fa-check"></i> Early event access</li></ul>
+        </div>
+        <div class="tier-card gold-tier active-tier">
+          <div class="tier-badge">Most Popular</div>
+          <div class="tier-icon"><i class="fas fa-crown"></i></div>
+          <h3>Gold</h3><span class="tier-points">1,501 – 3,000 pts</span>
+          <ul><li><i class="fas fa-check"></i> 15% off every meal</li><li><i class="fas fa-check"></i> Free dessert always</li><li><i class="fas fa-check"></i> Priority table booking</li><li><i class="fas fa-check"></i> Chef's Table invites</li></ul>
+        </div>
+        <div class="tier-card platinum">
+          <div class="tier-icon"><i class="fas fa-gem"></i></div>
+          <h3>Platinum</h3><span class="tier-points">3,000+ pts</span>
+          <ul><li><i class="fas fa-check"></i> 20% off everything</li><li><i class="fas fa-check"></i> Personal chef requests</li><li><i class="fas fa-check"></i> Free delivery always</li><li><i class="fas fa-check"></i> VIP events + guests</li></ul>
+        </div>
+      </div>
+      <div class="loyalty-cta" data-aos="fade-up">
+        <a href="https://wa.me/255621335993?text=I'd%20like%20to%20join%20the%20Mbeya%20Eat%20Loyalty%20Program!" class="btn btn-gold" target="_blank">
+          <i class="fab fa-whatsapp"></i><span>Join Loyalty Program via WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- DELIVERY TRACKER -->
+  <section class="delivery section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Smart Delivery</span>
+        <h2 class="section-title">Track Your Order <span class="gold-text">in Real-Time</span></h2>
+        <p class="section-sub">Order via WhatsApp and follow your food from kitchen to your door</p>
+      </div>
+      <div class="tracker-mockup" data-aos="fade-up">
+        <div class="tracker-phone">
+          <div class="tracker-screen">
+            <div class="tracker-header"><i class="fas fa-arrow-left"></i><span>Order #MB-2847</span><i class="fas fa-ellipsis-v"></i></div>
+            <div class="tracker-map-placeholder">
+              <div class="map-dots">
+                <div class="map-dot restaurant-dot"><i class="fas fa-utensils"></i></div>
+                <div class="map-line"></div>
+                <div class="map-dot rider-dot pulse"><i class="fas fa-motorcycle"></i></div>
+                <div class="map-line"></div>
+                <div class="map-dot home-dot"><i class="fas fa-home"></i></div>
+              </div>
+              <p class="eta-text">ETA: <strong>12 minutes</strong></p>
+            </div>
+            <div class="tracker-steps">
+              <div class="ts-step done"><div class="ts-icon"><i class="fas fa-check"></i></div><div class="ts-text"><strong>Order Confirmed</strong><span>2:34 PM</span></div></div>
+              <div class="ts-step done"><div class="ts-icon"><i class="fas fa-check"></i></div><div class="ts-text"><strong>Preparing Your Food</strong><span>2:38 PM</span></div></div>
+              <div class="ts-step active"><div class="ts-icon"><i class="fas fa-motorcycle"></i></div><div class="ts-text"><strong>On the Way</strong><span>Your rider is 1.2km away</span></div></div>
+              <div class="ts-step pending"><div class="ts-icon"><i class="fas fa-home"></i></div><div class="ts-text"><strong>Delivered</strong><span>Soon...</span></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="tracker-info">
+          <h3>Order via WhatsApp in 3 Steps</h3>
+          <div class="order-steps">
+            <div class="os-step"><div class="os-num">1</div><div class="os-text"><strong>Send your order</strong><p>Message us on WhatsApp with your order and delivery address</p></div></div>
+            <div class="os-step"><div class="os-num">2</div><div class="os-text"><strong>We confirm & prepare</strong><p>We confirm your order in minutes and start preparing fresh</p></div></div>
+            <div class="os-step"><div class="os-num">3</div><div class="os-text"><strong>Track & receive</strong><p>Get live updates on WhatsApp until your food arrives hot</p></div></div>
+          </div>
+          <a href="https://wa.me/255621335993?text=I'd%20like%20to%20order%20food%20from%20Mbeya%20Eat!" class="btn btn-gold" target="_blank">
+            <i class="fab fa-whatsapp"></i><span>Order Now on WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Find Us</span>
+        <h2 class="section-title">Come Visit <span class="gold-text">Mbeya Eat</span></h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info" data-aos="fade-right">
+          <div class="contact-card"><i class="fas fa-map-marker-alt"></i><div><strong>Location</strong><p>Mbeya City Centre, Near Mbeya Hotel<br>Mbeya, Tanzania</p></div></div>
+          <div class="contact-card"><i class="fas fa-phone"></i><div><strong>Phone</strong><p><a href="tel:+255621335993">+255 621 335 993</a></p></div></div>
+          <div class="contact-card"><i class="fab fa-whatsapp"></i><div><strong>WhatsApp Orders</strong><p><a href="https://wa.me/255621335993">+255 621 335 993</a></p></div></div>
+          <div class="contact-card"><i class="fas fa-envelope"></i><div><strong>Email</strong><p><a href="mailto:hello@mbeyaeat.co.tz">hello@mbeyaeat.co.tz</a></p></div></div>
+          <div class="contact-card"><i class="fas fa-clock"></i><div><strong>Opening Hours</strong><p>Monday – Sunday<br>7:00 AM – 11:00 PM</p></div></div>
+        </div>
+        <div class="map-wrapper" data-aos="fade-left">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63488.49!2d33.38!3d-8.90!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19db47ea6adcf0e9%3A0x2b69e9a6b3e4e4ee!2sMbeya%2C%20Tanzania!5e0!3m2!1sen!2s!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mbeya Eat Location"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="#home" class="footer-logo"><span>Mbeya</span><span class="gold-text">Eat</span><span class="gold-text">.</span></a>
+            <p>Mbeya's premier dining destination. Fresh food, warm hearts, unforgettable moments.</p>
+            <div class="footer-socials">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="https://wa.me/255621335993" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+              <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#menu">Menu</a></li>
+              <li><a href="#chef">Our Chef</a></li>
+              <li><a href="#events">Events</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+              <li><a href="#reservation">Reservations</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Our Services</h4>
+            <ul>
+              <li><a href="#reservation">Table Reservations</a></li>
+              <li><a href="#">WhatsApp Ordering</a></li>
+              <li><a href="#">Food Delivery</a></li>
+              <li><a href="#">Private Events</a></li>
+              <li><a href="#">Catering Services</a></li>
+              <li><a href="#">Loyalty Rewards</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Newsletter</h4>
+            <p>Get weekly specials and event updates straight to your inbox.</p>
+            <div class="newsletter-form">
+              <input type="email" placeholder="Your email address" />
+              <button type="button"><i class="fas fa-arrow-right"></i></button>
+            </div>
+            <div class="footer-badges">
+              <span class="badge-item"><i class="fas fa-shield-alt"></i> Halal Certified</span>
+              <span class="badge-item"><i class="fas fa-leaf"></i> Farm Fresh</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2025 Mbeya Eat. All rights reserved. | Built with <span class="gold-text">♥</span> by <a href="https://zetuniz.github.io" target="_blank" class="gold-text">Zetu</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
